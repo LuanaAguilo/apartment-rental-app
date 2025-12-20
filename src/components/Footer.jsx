@@ -1,12 +1,12 @@
 function Footer() {
   return (
-    <footer className="footer">
+    <footer>
       <a
-        href="https://github.com/YOUR-USERNAME/YOUR-REPO"
+        href="https://github.com/LuanaAguilo/short-stays"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
-        GitHub Repository
+        View on GitHub
       </a>
     </footer>
   );

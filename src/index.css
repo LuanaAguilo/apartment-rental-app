@@ -13,11 +13,10 @@ body {
 
 body {
   margin: 0;
-  background-color: #f7f3ef;
+  background: #f7f3ef;
   color: #2b1e14;
 }
 
-/* IMPORTANT: make the React root fill the full page width */
 #root {
   width: 100%;
   min-height: 100vh;
