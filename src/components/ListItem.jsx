@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ListItem({ item, onDelete }) {
   const isExpensive = item.price >= 2500;
 
@@ -6,7 +8,9 @@ function ListItem({ item, onDelete }) {
       <span style={{ width: "24px" }}>{isExpensive ? "✔️" : "❌"}</span>
 
       <div style={{ flex: 1 }}>
-        <strong>{item.name}</strong> — ${item.price}
+        <strong>
+          <Link to={`/apartments/${item.id}`}>{item.name}</Link>
+        </strong> — ${item.price}
       </div>
 
       <button type="button" onClick={() => onDelete(item.id)}>

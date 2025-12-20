@@ -1,32 +1,29 @@
-function Sidebar({ page, setPage }) {
+import { NavLink } from "react-router-dom";
+
+function Sidebar() {
   return (
     <aside className="sidebar">
       <p className="sidebar-title">Navigation</p>
-
       <div className="sidebar-nav">
-        <button
-          type="button"
-          className={page === "home" ? "nav-btn active" : "nav-btn"}
-          onClick={() => setPage("home")}
+        <NavLink
+          to="/"
+          className={({ isActive }) => isActive ? "nav-btn active" : "nav-btn"}
+          end
         >
           Home
-        </button>
-
-        <button
-          type="button"
-          className={page === "about" ? "nav-btn active" : "nav-btn"}
-          onClick={() => setPage("about")}
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => isActive ? "nav-btn active" : "nav-btn"}
         >
           About
-        </button>
-
-        <button
-          type="button"
-          className={page === "apartments" ? "nav-btn active" : "nav-btn"}
-          onClick={() => setPage("apartments")}
+        </NavLink>
+        <NavLink
+          to="/apartments"
+          className={({ isActive }) => isActive ? "nav-btn active" : "nav-btn"}
         >
           Apartments
-        </button>
+        </NavLink>
       </div>
     </aside>
   );
